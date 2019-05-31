@@ -19,10 +19,12 @@ class App extends Component {
 
   render() {
     const projects = this.props.projectsList.map(project => {
-      return <div key={project.id}>
-                <div>{project.name}</div>
-                <div>{project.description}</div>
-            </div>
+      return <ul key={project.id}>
+              <li>
+                <div>Project Name: {project.name}</div>
+                <div>Description: {project.description}</div>
+              </li>
+            </ul>
     })
     return (
       <div className="App">
